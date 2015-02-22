@@ -8,9 +8,9 @@ package pl.mg.javatst.threads;
 public class JoinTest {
 
     public static void main(String[] args) {
-        Thread th1 = new Thread(new SomeThread("1"));
+        Thread th1 = new Thread(new SleepThread("1"));
 
-        Thread th2 = new Thread(new SomeThread("2"));
+        Thread th2 = new Thread(new SleepThread("2"));
         th1.start();
         try {
             th1.join();
