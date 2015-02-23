@@ -13,5 +13,4 @@ public class SynchronizationTest {
         th2.start();
         System.out.println(syncing.getValue());
     }
-
 }
