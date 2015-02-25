@@ -5,6 +5,12 @@ import java.util.List;
 import java.util.Random;
 
 /**
+ * Synchronizowanie mniejszych bloków kodu pozwala przyspieszyć działanie aplikacji.
+ * Synchronizując całe funkcje stageOne, stageTwo czas wykonania jest dłuższy bo na obiekcie Worker jest jeden lock
+ * i mimo tego, że są dwa wątki i działają na innych obiektach to czekają jeden na drugi, bo mają dostep tylko do jednego locka.
+ * Rozwiązniem jest np. stworzenie dwóch obiektów do lockowania w blokach dzieki czemu obiekty mogą wywoływać locki niezależnie.
+ * Wtedy działa to zdecydowanie szybciej.
+ * MOżna tworzyć bloki synchronized na obiektach, na których wykonuje się działanie, ale lepiej tworzyć osobne obiekty.
  * Created by m on 2015-02-23.
  */
 public class Worker {
@@ -14,22 +20,29 @@ public class Worker {
     private List<Integer> list1 = new ArrayList<>();
     private List<Integer> list2 = new ArrayList<>();
 
+    private Object lock1 = new Object();
+    private Object lock2 = new Object();
+
     public void stageOne() {
-        try {
-            Thread.sleep(1);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        synchronized (lock1) {
+            try {
+                Thread.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            list1.add(random.nextInt(100));
         }
-        list1.add(random.nextInt(100));
     }
 
-    public void stageTwo() {
-        try {
-            Thread.sleep(1);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+    public synchronized void stageTwo() {
+        synchronized (lock2) {
+            try {
+                Thread.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            list2.add(random.nextInt(100));
         }
-        list2.add(random.nextInt(100));
     }
 
     public void process() {
