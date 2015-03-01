@@ -5,6 +5,8 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
 /**
+ * Testy synchronizowane kolejki.
+ * Synchronizacja jest już w niej zaimplementowana i nie trzeba robić jej samemu.
  * Created by m on 2015-02-25.
  */
 public class BlockingQueueTest {

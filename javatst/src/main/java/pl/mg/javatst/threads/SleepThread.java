@@ -2,6 +2,9 @@ package pl.mg.javatst.threads;
 
 import java.util.Random;
 
+/**
+ * Prosty sleep thread
+ */
 public class SleepThread implements Runnable {
 
     private String id;

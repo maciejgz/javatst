@@ -5,6 +5,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
+ * Testy countdown latch, czyli symulacja kroków do wykonania
  * Created by m on 2015-02-25.
  */
 public class CountDownLatchTest {

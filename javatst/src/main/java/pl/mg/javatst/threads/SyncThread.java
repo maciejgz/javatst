@@ -1,5 +1,8 @@
 package pl.mg.javatst.threads;
 
+/**
+ * Wątek z synchronizowanym dostępem do zmiennej.
+ */
 public class SyncThread implements Runnable {
 
     private SynchronizedObject sync;

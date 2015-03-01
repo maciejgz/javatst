@@ -2,8 +2,10 @@ package pl.mg.javatst.threads;
 
 /**
  * join() test
- * @author m
+ * Join pozwala na zatrzymanie wykonywania
+ * obecnego wątku do czasu wykonania joinowanego wątku.
  *
+ * @author m
  */
 public class JoinTest {
 

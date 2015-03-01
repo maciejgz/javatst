@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Przerywanie wątku ze zmienną volatile.
  * Created by m on 2015-02-22.
  */
-public class StopThreadTest {
+public class InterruptSynchronizedThreadTest {
 
 
     public static void main(String[] args) {
