@@ -1,6 +1,5 @@
-package pl.mg.javatst.threads;
+package pl.mg.javatst.threads_video_tut;
 
-import com.sun.corba.se.pept.transport.ConnectionCache;
 import pl.mg.javatst.util.Println;
 
 import java.util.concurrent.ExecutorService;

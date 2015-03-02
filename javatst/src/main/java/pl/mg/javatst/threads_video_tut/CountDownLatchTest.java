@@ -1,4 +1,4 @@
-package pl.mg.javatst.threads;
+package pl.mg.javatst.threads_video_tut;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;

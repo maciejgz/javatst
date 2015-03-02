@@ -1,6 +1,4 @@
-package pl.mg.javatst.threads;
-
-import com.sun.corba.se.impl.orbutil.concurrent.Sync;
+package pl.mg.javatst.threads_video_tut;
 
 /**
  * Created by m on 2015-02-23.
