@@ -52,7 +52,7 @@ package pl.mg.javatst.codility;
  * Elements of input arrays can be modified.
  * Created by Kacper on 2015-03-09.
  *
- * 50% - można poprawić walidację, bo na tym
+ * 50% - można poprawić walidację, bo na tym wyleciało
  */
 public class PermCheck {
 

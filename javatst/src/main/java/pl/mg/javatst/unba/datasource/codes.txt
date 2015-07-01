@@ -1,0 +1,4 @@
+<parameter>
+  <name>fatalCodes</name>
+  <value>1000,1001,1003,1555,1562</value>
+</parameter>

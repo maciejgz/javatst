@@ -1,0 +1,41 @@
+﻿<unba2>
+	<msisdn id="668083311" co_id="76372986" customer_id="69541579" unba_call_date="2015-04-24 14:57:38" start_date="2015-03-25 00:00:00" end_date="2015-04-24 14:57:35" query_no="6" credit_groups_no="0" usage_source="CONTR_UNBILLED" before_first_bill="N" charge="Y">
+		<costs>
+			<calls all="0.00" roaming="0.00" premium="0.00" last_call_date="15:47 2014-08-07"/>
+		</costs>
+		<limits>
+			<premium notify_amnt="0.00" block_amnt="0.00" unbilled_amnt="0.00" over_amnt="0.00"/>
+		</limits>
+		<rating_scenarios>
+			<rating_scenario>
+				<scenario_id>2</scenario_id>
+				<scenario_des>30 min do wszystkich</scenario_des>
+				<scenario_counters>
+					<counter>
+						<counter_id>2</counter_id>
+						<counter_des>T-mobile and Heyah</counter_des>
+						<step>1</step>
+						<volume_total>0</volume_total>
+						<volume_left>1800</volume_left>
+						<volume_limit>1800</volume_limit>
+					</counter>
+				</scenario_counters>
+			</rating_scenario>
+			<rating_scenario>
+				<scenario_id>3</scenario_id>
+				<scenario_des>30 min do wszystkich</scenario_des>
+				<scenario_counters>
+					<counter>
+						<counter_id>4</counter_id>
+						<counter_des>T-mobile and Heyah</counter_des>
+						<step>1</step>
+						<volume_total>0</volume_total>
+						<volume_left>1800</volume_left>
+						<volume_limit>1800</volume_limit>
+					</counter>
+				</scenario_counters>
+			</rating_scenario>
+		</rating_scenarios>
+	</msisdn>
+</unba2>
+

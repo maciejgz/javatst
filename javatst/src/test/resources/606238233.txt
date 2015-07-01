@@ -1,0 +1,18 @@
+﻿<unba2>
+<msisdn id="606238233" co_id="76081334" customer_id="69116077" unba_call_date="2015-04-24 14:53:37" start_date="2015-03-25 00:00:00" end_date="2015-04-24 14:53:37" query_no="1" credit_groups_no="0" usage_source="CONTR_UNBILLED" before_first_bill="N" charge="Y">
+<costs>
+<calls all="32.40" roaming="0.00" premium="0.00" last_call_date="15:50 2015-04-16"/>
+</costs>
+<limits>
+<premium notify_amnt="0.00" block_amnt="0.00" unbilled_amnt="0.00" over_amnt="0.00"/>
+</limits>
+<rating_scenarios><rating_scenario><scenario_id>2</scenario_id><scenario_des>30 min do wszystkich</scenario_des><scenario_counters><counter>
+  <counter_id>2</counter_id>
+  <counter_des>T-mobile and Heyah</counter_des>
+  <step>3</step>
+  <volume_total>8004</volume_total>
+  <volume_left>0</volume_left>
+  <volume_limit>6204</volume_limit>
+</counter>
+</scenario_counters></rating_scenario></rating_scenarios></msisdn>
+</unba2>
