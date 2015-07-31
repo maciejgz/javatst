@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/../../codewars/codewars" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/pl/mg/javatst/unba/AbstractUnbaBean.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/java/pl/mg/javatst/unba/AccessFee.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/java/pl/mg/javatst/unba/Credit.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/java/pl/mg/javatst/unba/CreditType.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/java/pl/mg/javatst/unba/Discount.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/java/pl/mg/javatst/unba/GetUnbillDataBean.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/java/pl/mg/javatst/unba/RatingScenario.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/java/pl/mg/javatst/unba/Test.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/java/pl/mg/javatst/unba/UnbaConfiguration.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/java/pl/mg/javatst/unba/XMLParser.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/java/pl/mg/javatst/unba/datasource" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/java/pl/mg/javatst/unba/osp" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/test/resources/512127848.txt" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/test/resources/606238233.txt" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/test/resources/664409160.txt" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/test/resources/668083311.txt" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/test/resources/emptyCounters.txt" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/test/resources/emptyScenarios.txt" charset="windows-1250" />
   </component>
 </project>

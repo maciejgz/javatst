@@ -54,7 +54,7 @@ package pl.mg.javatst.codility;
  *
  * 50% - można poprawić walidację, bo na tym wyleciało
  */
-public class PermCheck {
+public class PermCheckL2Done {
 
     public int solution(int[] A) {
         int solution = 0;
