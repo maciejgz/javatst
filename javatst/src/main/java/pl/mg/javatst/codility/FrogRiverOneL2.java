@@ -55,7 +55,10 @@ import java.util.ArrayList;
  * expected worst-case time complexity is O(N);
  * expected worst-case space complexity is O(X), beyond input storage (not counting the storage required for input arguments).
  * Elements of input arrays can be modified.
- * Created by m on 2015-03-10.
+ * Created by Maiej on 2015-03-10.
+ * 
+ * TODO nieskoczone
+ * 
  */
 public class FrogRiverOneL2 {
 
