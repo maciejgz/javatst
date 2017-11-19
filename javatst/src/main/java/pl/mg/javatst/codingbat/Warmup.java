@@ -29,6 +29,6 @@ public class Warmup {
 
 
     private static boolean front3(String str) {
-       return str.startsWith("hi");
+        return str.startsWith("hi");
     }
 }
