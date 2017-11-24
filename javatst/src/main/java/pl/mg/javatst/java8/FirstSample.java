@@ -7,7 +7,7 @@ import java.io.FileFilter;
 /**
  * Lambda tests
  */
-public class Lambda {
+public class FirstSample {
 
 
     public File[] findHiddenFiles7(String path) {

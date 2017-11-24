@@ -10,14 +10,14 @@ public class LambdaTest {
 
     @Test
     public void emptyHiddenFileList7VersionTest() {
-        Lambda lambda = new Lambda();
+        FirstSample lambda = new FirstSample();
         File[] hiddenFiles7 = lambda.findHiddenFiles7(".");
         assertEquals(0, hiddenFiles7.length);
     }
 
     @Test
     public void emptyHiddenFileList8VersionTest() {
-        Lambda lambda = new Lambda();
+        FirstSample lambda = new FirstSample();
         // :: is a method reference
         File[] hiddenFiles7 = lambda.findHiddenFiles8(".");
         assertEquals(0, hiddenFiles7.length);
