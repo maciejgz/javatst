@@ -1,15 +1,15 @@
 package pl.mg.javatst.java8.behaviourparametrization;
 
-public class BehaviourApple2 {
+public class BehaviourApple {
 
     private String color;
 
-    public BehaviourApple2(String color, int weight) {
+    public BehaviourApple(String color, int weight) {
         this.color = color;
         this.weight = weight;
     }
 
-    public BehaviourApple2() {
+    public BehaviourApple() {
     }
 
     private int weight;

@@ -8,7 +8,7 @@ import java.util.List;
  * metody ze zmienną ich
  * ilośicą w zależności od zachowania
  */
-public class BehaviourParametrization2 {
+public class BehaviourParametrization {
 
     /**
      * The worst filtering method. Bez żadnych parametrów w metodzie
@@ -16,9 +16,9 @@ public class BehaviourParametrization2 {
      * @param inventory
      * @return
      */
-    public static List<BehaviourApple2> filterGreenApple(List<BehaviourApple2> inventory) {
-        List<BehaviourApple2> result = new ArrayList<>();
-        for (BehaviourApple2 apple2 : inventory) {
+    public static List<BehaviourApple> filterGreenApple(List<BehaviourApple> inventory) {
+        List<BehaviourApple> result = new ArrayList<>();
+        for (BehaviourApple apple2 : inventory) {
             if ("green".equals(apple2.getColor())) {
                 result.add(apple2);
             }
@@ -33,9 +33,9 @@ public class BehaviourParametrization2 {
      * @param color
      * @return
      */
-    public static List<BehaviourApple2> filterAppleByColor(List<BehaviourApple2> inventory, String color) {
-        List<BehaviourApple2> result = new ArrayList<>();
-        for (BehaviourApple2 apple2 : inventory) {
+    public static List<BehaviourApple> filterAppleByColor(List<BehaviourApple> inventory, String color) {
+        List<BehaviourApple> result = new ArrayList<>();
+        for (BehaviourApple apple2 : inventory) {
             if (color.equals(apple2.getColor())) {
                 result.add(apple2);
             }
@@ -50,9 +50,9 @@ public class BehaviourParametrization2 {
      * @param weight
      * @return
      */
-    public static List<BehaviourApple2> filterApplesByWeight(List<BehaviourApple2> inventory, int weight) {
-        List<BehaviourApple2> result = new ArrayList<>();
-        for (BehaviourApple2 apple2 : inventory) {
+    public static List<BehaviourApple> filterApplesByWeight(List<BehaviourApple> inventory, int weight) {
+        List<BehaviourApple> result = new ArrayList<>();
+        for (BehaviourApple apple2 : inventory) {
             if (apple2.getWeight() > weight) {
                 result.add(apple2);
             }
