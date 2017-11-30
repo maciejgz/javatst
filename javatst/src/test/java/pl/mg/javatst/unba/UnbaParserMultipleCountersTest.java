@@ -11,11 +11,11 @@ import java.io.IOException;
 /**
  * Created by m on 2015-04-24.
  */
-public class UnbaParserTestMultipleScenarios {
+public class UnbaParserMultipleCountersTest {
 
     XMLParser parser = null;
     String xmlToParse = null;
-    String fileName = "668083311.txt";
+    String fileName = "664409160.txt";
 
     @Before
     public void before() {
@@ -28,9 +28,8 @@ public class UnbaParserTestMultipleScenarios {
             e.printStackTrace();
         }
 
-
         xmlToParse = xmlToParse.replaceAll("[^\\x20-\\x7e]", "");
-        parser = new XMLParser(Logger.getLogger(UnbaParserTestMultipleScenarios.class), xmlToParse, "668083311");
+        parser = new XMLParser(Logger.getLogger(UnbaParserMultipleCountersTest.class), xmlToParse, "664409160");
     }
 
     @Test

@@ -6,19 +6,16 @@ import org.junit.Before;
 import org.junit.Test;
 import pl.mg.javatst.util.Println;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Scanner;
 
 /**
  * Created by m on 2015-04-24.
  */
-public class UnbaParserTest606 {
+public class UnbaParserMultipleScenariosTest {
 
     XMLParser parser = null;
     String xmlToParse = null;
-    String fileName = "606238233.txt";
+    String fileName = "668083311.txt";
 
     @Before
     public void before() {
@@ -31,8 +28,9 @@ public class UnbaParserTest606 {
             e.printStackTrace();
         }
 
+
         xmlToParse = xmlToParse.replaceAll("[^\\x20-\\x7e]", "");
-        parser = new XMLParser(Logger.getLogger(UnbaParserTest606.class), xmlToParse, "606238233");
+        parser = new XMLParser(Logger.getLogger(UnbaParserMultipleScenariosTest.class), xmlToParse, "668083311");
     }
 
     @Test

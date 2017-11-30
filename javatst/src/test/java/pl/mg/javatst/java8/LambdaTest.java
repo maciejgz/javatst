@@ -22,5 +22,4 @@ public class LambdaTest {
         File[] hiddenFiles7 = lambda.findHiddenFiles8(".");
         assertEquals(0, hiddenFiles7.length);
     }
-
 }

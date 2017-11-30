@@ -11,7 +11,7 @@ import java.io.IOException;
 /**
  * Created by m on 2015-04-24.
  */
-public class UnbaParserTestEmptyCounters {
+public class UnbaParserEmptyCountersTest {
 
     XMLParser parser = null;
     String xmlToParse = null;
@@ -31,7 +31,7 @@ public class UnbaParserTestEmptyCounters {
 
         xmlToParse = xmlToParse.replaceAll("[^\\x20-\\x7e]", "");
         System.out.println(xmlToParse);
-        parser = new XMLParser(Logger.getLogger(UnbaParserTestEmptyCounters.class), xmlToParse, "512127848");
+        parser = new XMLParser(Logger.getLogger(UnbaParserEmptyCountersTest.class), xmlToParse, "512127848");
     }
 
     @Test

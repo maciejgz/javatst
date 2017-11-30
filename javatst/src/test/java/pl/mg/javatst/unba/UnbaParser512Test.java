@@ -11,7 +11,7 @@ import java.util.Scanner;
 /**
  * Created by m on 2015-04-24.
  */
-public class UnbaParserTest512 {
+public class UnbaParser512Test {
 
     XMLParser parser = null;
     String xmlToParse = null;
@@ -41,7 +41,7 @@ public class UnbaParserTest512 {
         //remove invalid char
         xmlToParse = xmlToParse.replaceAll("[^\\x20-\\x7e]", "");
 //        Println.print(xmlToParse);
-        parser = new XMLParser(Logger.getLogger(UnbaParserTest606.class), xmlToParse, "512127848");
+        parser = new XMLParser(Logger.getLogger(UnbaParser606Test.class), xmlToParse, "512127848");
 
     }
 
