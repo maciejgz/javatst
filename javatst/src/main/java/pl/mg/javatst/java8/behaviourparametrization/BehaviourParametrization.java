@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Chapter 2 - pozwala na przekazywanie wielu parametrów do
  * metody ze zmienną ich
- * ilośicą w zależności od zachowania
+ * ilością w zależności od zachowania
  */
 public class BehaviourParametrization {
 
@@ -62,7 +62,6 @@ public class BehaviourParametrization {
 
 
     //podejśćie siódme
-
     public interface Predicate<T> {
         boolean test(T t);
     }
