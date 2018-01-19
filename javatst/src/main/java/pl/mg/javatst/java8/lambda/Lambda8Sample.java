@@ -3,6 +3,8 @@ package pl.mg.javatst.java8.lambda;
 import pl.mg.javatst.java8.behaviourparametrization.BehaviourParametrization;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
@@ -61,6 +63,28 @@ public class Lambda8Sample {
             result.add(f.apply(s));
         }
         return result;
+    }
+
+
+    public static void myTest() {
+
+        Checker<Integer> isOddLambda = object -> object % 2 != 0;
+
+        System.out.println(isOddLambda.check(123));
+        System.out.println(isOddLambda.check(124));
+
+    }
+
+    public interface Checker<T> {
+        boolean check(T object);
+    }
+
+    public static void sortListTest() {
+        List<String> content = Arrays.asList("tesds", "m2343", "4tesds", "test2");
+        content.forEach(n -> System.out.println(n));
+        Collections.sort(content, (p1, p2) -> p1.compareTo(p2));
+        System.out.println("after sorting");
+        content.forEach(n -> System.out.println(n));
     }
 
 }

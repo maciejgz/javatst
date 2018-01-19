@@ -24,4 +24,15 @@ public class Lambda8SampleTest {
         List<Integer> result = Lambda8Sample.map(Arrays.asList("lamba", "test", "another test"), (String s) -> s.length());
         Assert.assertEquals(new Integer(5), result.get(0));
     }
+
+    @Test
+    public void myTestsTest() {
+        Lambda8Sample.myTest();
+        Assert.assertEquals(true, true);
+    }
+
+    @Test
+    public void sortingTest() {
+        Lambda8Sample.sortListTest();
+    }
 }
