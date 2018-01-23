@@ -53,7 +53,7 @@ public class Lambda8Sample {
      * użycie interfejsu funcyjnego function możliwego do przekazania jako parametr w requescie
      *
      * @param list
-     * @param f
+     * @param fstajesz z
      * @param <T>
      * @param <R>
      */
