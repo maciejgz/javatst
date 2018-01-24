@@ -17,6 +17,9 @@ public class ObserverTester {
 
         ((Subject) subject).setState(12);
 
+
+        ((Subject) subject).setState(1000);
+
     }
 
 }

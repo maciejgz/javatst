@@ -13,6 +13,7 @@ public class Subject extends Observable {
 
 
     public void setState(int newValue) {
+        System.out.println("Subject changed to: " + newValue);
         this.state = newValue;
         this.notifyObservers();
     }
