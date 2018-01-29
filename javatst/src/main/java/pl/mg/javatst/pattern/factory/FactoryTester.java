@@ -1,5 +1,9 @@
 package pl.mg.javatst.pattern.factory;
 
+
+/**
+ * Factory pattern JAVA implementation
+ */
 public class FactoryTester {
 
     public static void main(String[] args) {
@@ -10,6 +14,6 @@ public class FactoryTester {
         circle.draw();
         rectangle.draw();
         triangle.draw();
-
     }
 }
+ 

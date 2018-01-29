@@ -3,6 +3,10 @@ package pl.mg.javatst.pattern.observer;
 import java.util.Observable;
 import java.util.Observer;
 
+
+/**
+ * Observer pattern simple implementation.
+ */
 public class ObserverTester {
 
 
