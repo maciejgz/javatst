@@ -31,6 +31,8 @@ package pl.mg.javatst.codility;
  * expected worst-case time complexity is O(log(N));
  * expected worst-case space complexity is O(1).
  *
+ * 100%
+ *
  * @author Maciej Gzik
  */
 public class BinaryGap {
