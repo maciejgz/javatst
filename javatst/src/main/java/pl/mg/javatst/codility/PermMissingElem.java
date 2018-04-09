@@ -33,7 +33,7 @@ package pl.mg.javatst.codility;
  * expected worst-case time complexity is O(N);
  * expected worst-case space complexity is O(1), beyond input storage
  * (not counting the storage required for input arguments).
- *
+ * <p>
  * 100%
  */
 public class PermMissingElem {

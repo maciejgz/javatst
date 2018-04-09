@@ -51,7 +51,7 @@ package pl.mg.javatst.codility;
  * expected worst-case space complexity is O(N), beyond input storage (not counting the storage required for input arguments).
  * Elements of input arrays can be modified.
  * Created by Maciej on 2015-03-09.
- *
+ * <p>
  * Done
  * 50% - można poprawić walidację, bo na tym wyleciało
  */
@@ -70,8 +70,8 @@ public class PermCheckL2Done {
             sum += A[i];
         }
 
-        int haveToBe = (((max + (max-A.length))*A.length)/2);
-        if(sum == haveToBe)
+        int haveToBe = (((max + (max - A.length)) * A.length) / 2);
+        if (sum == haveToBe)
             return 1;
         else
             return 0;
