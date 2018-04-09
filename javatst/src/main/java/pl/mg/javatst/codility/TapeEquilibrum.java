@@ -47,28 +47,34 @@ package pl.mg.javatst.codility;
  * expected worst-case space complexity is O(N), beyond input storage (not counting the storage required for input arguments).
  * Elements of input arrays can be modified.
  * Created by Maciej on 2015-03-09.
- *
- *  Done
+ * <p>
+ * Done
  * 100%
  */
 public class TapeEquilibrum {
 
+
+    public static void main(String[] args) {
+        TapeEquilibrum equilibrum = new TapeEquilibrum();
+        System.out.println(equilibrum.solution(new int[]{3, 1, 2, 4, 3}));
+    }
+
     public int solution(int[] A) {
         int sumRight = 0;
-        for (int i = 0; i < A.length; i++) {
+        for (int i = 1; i < A.length; i++) {
             sumRight += A[i];
         }
         int sumLeft = A[0];
-        int answer = Math.abs(sumLeft = sumRight);
+        int minimumAnswer = Math.abs(sumLeft - sumRight);
+        int answer;
         for (int i = 1; i < A.length; i++) {
-            if (Math.abs(sumLeft - sumRight) < answer) {
-                answer = Math.abs(sumLeft - sumRight);
+            answer = Math.abs(sumLeft - sumRight);
+            if (answer < minimumAnswer) {
+                minimumAnswer = answer;
             }
-
             sumLeft += A[i];
             sumRight -= A[i];
         }
-
-        return answer;
+        return minimumAnswer;
     }
 }
