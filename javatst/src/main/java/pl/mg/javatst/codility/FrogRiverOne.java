@@ -63,12 +63,15 @@ import java.util.HashSet;
  * expected worst-case time complexity is O(N);
  * expected worst-case space complexity is O(X), beyond input storage
  * (not counting the storage required for input arguments).
+ * <p>
+ * 72%
  */
 public class FrogRiverOne {
 
     public static void main(String[] args) {
         FrogRiverOne frogRiverOne = new FrogRiverOne();
-        frogRiverOne.solution(5, new int[]{1, 3, 1, 4, 2, 3, 5, 4});
+        System.out.println(frogRiverOne.solution(5, new int[]{1, 3, 1, 4, 2, 3, 5, 4}));
+        System.out.println(frogRiverOne.solution(1, new int[]{1}));
     }
 
 
@@ -82,13 +85,14 @@ public class FrogRiverOne {
                 places.add(A[i]);
             }
             if (places.size() == X) {
-                result = i - 1;
+                result = i;
+                break;
             }
         }
         if (A.length == 1) {
-            result = -1;
+            result = 0;
         }
-        if (result < 0 || result < X) {
+        if (result < 0) {
             result = -1;
         }
         return result;
