@@ -31,12 +31,13 @@ import java.util.List;
  * expected worst-case time complexity is O(N);
  * expected worst-case space complexity is O(N),
  * beyond input storage (not counting the storage required for input arguments).
+ * 100%
  */
 public class MissingInteger {
 
     public static void main(String[] args) {
-
-
+        MissingInteger missingInteger = new MissingInteger();
+        System.out.println(missingInteger.solution(new int[]{4, 5, 6, 2}));
     }
 
     public int solution(int[] A) {
@@ -53,10 +54,15 @@ public class MissingInteger {
         for (int j = 0; j < sortedList.size(); j++) {
             if (sortedList.get(j) != (j + 1)) {
                 result = j + 1;
+                break;
             }
         }
-        if(sortedList.size() == 0) {
+
+        if (sortedList.size() == 0) {
             result = 1;
+        }
+        if (result == 0) {
+            result = sortedList.size() + 1;
         }
         return result;
     }
