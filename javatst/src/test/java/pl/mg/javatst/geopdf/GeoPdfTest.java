@@ -62,6 +62,25 @@ public class GeoPdfTest {
     }
 
     @Test
+    public void apacheTikaGeoTiffLargeParsingTest() throws IOException {
+        String pdf1FileName = "geo/sample2.tif";
+
+        ClassLoader classLoader = getClass().getClassLoader();
+        InputStream resourceAsStream = classLoader.getResourceAsStream(pdf1FileName);
+        Metadata metadata = new Metadata();
+        GDALParser parser = new GDALParser();
+        try {
+            parser.parse(resourceAsStream, new Cos2ContentHandler(), metadata);
+        } catch (SAXException e) {
+            e.printStackTrace();
+        } catch (TikaException e) {
+            e.printStackTrace();
+        }
+        Gson gson = new Gson();
+        System.out.println("metadata: " + gson.toJson(metadata));
+    }
+
+    @Test
     public void apacheTikaGeospatialPdfParsingTest() throws IOException {
         String pdf1FileName = "geo/GeospatialPDF1.pdf";
 
