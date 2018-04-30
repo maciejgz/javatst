@@ -72,15 +72,14 @@ package pl.mg.javatst.codility;
 public class GenomicRangeQuery {
 
     public static void main(String[] args) {
-
+        GenomicRangeQuery genomicRangeQuery = new GenomicRangeQuery();
+        genomicRangeQuery.solution(null, null, null);
     }
-
 
     public int[] solution(String S, int[] P, int[] Q) {
         int[] result = new int[0];
 
         return result;
     }
-
 
 }
