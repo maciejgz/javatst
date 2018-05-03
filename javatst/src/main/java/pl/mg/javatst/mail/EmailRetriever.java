@@ -5,11 +5,12 @@ import java.util.Properties;
 
 public class EmailRetriever {
 
+    final static String SSL_FACTORY = "javax.net.ssl.SSLSocketFactory";
+
     public static void main(String[] args) {
 
-        EmailRetriever.check("eversis.nazwa.pl", "pop3", "sentinel2cosDev@eversis.nazwa.pl", "\'9G*$s!YUZtsBF>@");
+        EmailRetriever.check("eversis.com", "pop3", "sentinel2cosDev@eversis.com", "'9G*$s!YUZtsBF>@");
     }
-
 
     public static void check(String host, String storeType, String user,
                              String password) {
@@ -22,7 +23,11 @@ public class EmailRetriever {
             properties.put("mail.pop3.port", "995");
             properties.put("mail.pop3.starttls.enable", "true");
             properties.put("mail.pop3.ssl.trust", "true");
+            properties.put("mail.pop3.socketFactory.class", SSL_FACTORY);
+            properties.put("mail.pop3.socketFactory.fallback", "false");
+
             Session emailSession = Session.getDefaultInstance(properties);
+
 
             //create the POP3 store object and connect with the pop server
             Store store = emailSession.getStore("pop3s");
@@ -44,6 +49,7 @@ public class EmailRetriever {
                 System.out.println("Subject: " + message.getSubject());
                 System.out.println("From: " + message.getFrom()[0]);
                 System.out.println("Text: " + message.getContent().toString());
+
 
             }
 
