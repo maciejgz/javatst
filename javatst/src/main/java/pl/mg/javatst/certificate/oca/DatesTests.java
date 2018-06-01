@@ -13,5 +13,7 @@ public class DatesTests {
         System.out.println(LocalTime.now());
         System.out.println(LocalDateTime.now());
 
+        //tworzenie daty 2018-06-21
+        LocalDate standard = LocalDate.of(2018, 6, 21);
     }
 }
