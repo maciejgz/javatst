@@ -32,7 +32,7 @@ public class DistinctSort {
     System.out.println(distinctSort.solution(integers));
   }
 
-  void sort(int arr[], int low, int high) {
+  public static void sort(int arr[], int low, int high) {
     if (low < high) {
       /* pi is partitioning index, arr[pi] is
       now at right place */
@@ -45,7 +45,7 @@ public class DistinctSort {
     }
   }
 
-  int partition(int arr[], int low, int high) {
+  public static int partition(int arr[], int low, int high) {
     int pivot = arr[high];
     int i = (low - 1); // index of smaller element
     for (int j = low; j < high; j++) {
