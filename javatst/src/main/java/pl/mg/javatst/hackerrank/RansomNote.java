@@ -3,6 +3,9 @@ package pl.mg.javatst.hackerrank;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * https://www.hackerrank.com/challenges/ctci-ransom-note
+ */
 public class RansomNote {
 
 

@@ -2,6 +2,7 @@ package pl.mg.javatst.hackerrank;
 
 /**
  * 25 points solution
+ *
  */
 public class ArrayManipulation {
     static long arrayManipulation(int n, int[][] queries) {
@@ -20,5 +21,9 @@ public class ArrayManipulation {
             }
         }
         return max;
+    }
+
+    public static void main(String[] args) {
+
     }
 }

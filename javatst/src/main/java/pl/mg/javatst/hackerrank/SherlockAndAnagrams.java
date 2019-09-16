@@ -1,5 +1,10 @@
 package pl.mg.javatst.hackerrank;
 
+/**
+ * Source
+ * https://www.hackerrank.com/challenges/sherlock-and-anagrams/
+ *
+ */
 public class SherlockAndAnagrams {
 
 
