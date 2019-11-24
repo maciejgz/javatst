@@ -1,0 +1,66 @@
+package pl.mg.javatst.cert.ocp;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class StreamTests {
+
+    public static void main(String[] args) {
+        List<Integer> arr = Arrays.asList(1, 2, 3, 4, 5);
+
+        System.out.println("count " + arr.stream().count());
+        System.out.println("max " + arr.stream().max(Integer::compareTo).get());
+        System.out.println("min " + arr.stream().min(Integer::compareTo).get());
+
+        arr.stream().findAny().ifPresent(w -> {
+            System.out.println("findAny " + w);
+        });
+
+
+        System.out.println(arr.stream().reduce((integer, integer2) -> {
+            return integer + integer2;
+        }).get());
+
+
+        System.out.println(arr.stream().reduce(1, (integer, integer2) -> integer * integer2));
+
+        //collect
+        System.out.println(arr.stream().collect(() -> {
+            return new HashMap<Integer, Integer>();
+        }, (a, b) -> {
+            a.put(b, b * b);
+        }, (a, b) -> {
+            a.putAll(b);
+        }));
+
+        System.out.println("collector toList: " + arr.stream().collect(Collectors.toList()));
+
+
+        //intermediate operations
+        //filter
+        arr.stream().filter(w -> w % 2 == 0).forEach(System.out::print);
+        System.out.println("");
+
+        //limit
+        arr.stream().limit(2).forEach(System.out::print);
+        System.out.println("");
+
+        //skip
+        arr.stream().skip(2).forEach(System.out::print);
+
+
+        //map
+        System.out.println("mapped: " + arr.stream().map(i -> i * 2).collect(Collectors.toList()));
+
+        //peek - nie zmienia streamu źródłowego
+        System.out.println("peek: " + arr.stream().peek(w -> w = 2).collect(Collectors.toList()));
+
+
+        //tasks
+        Stream<String> streamT1 = Stream.iterate("", (s) -> s + "1");
+        System.out.println("streamT1 " + streamT1.limit(2).peek(System.out::println).map(x -> x + "2").collect(Collectors.toList()));
+    }
+}
