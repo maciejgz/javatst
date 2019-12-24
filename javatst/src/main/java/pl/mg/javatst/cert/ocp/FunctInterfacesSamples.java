@@ -1,13 +1,9 @@
 package pl.mg.javatst.cert.ocp;
 
-import org.apache.commons.lang3.StringUtils;
-import org.apache.tools.ant.taskdefs.Exec;
 import pl.mg.javatst.java8.behaviourparametrization.BehaviourParametrization;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
-import java.util.concurrent.Executors;
 
 public class FunctInterfacesSamples {
 
