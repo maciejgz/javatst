@@ -3,6 +3,7 @@ package pl.mg.javatst.cert.ocp;
 import lombok.extern.slf4j.Slf4j;
 
 import java.time.Duration;
+import java.time.Period;
 import java.time.temporal.ChronoUnit;
 
 @Slf4j
@@ -17,5 +18,8 @@ public class DateAndTime {
         System.out.println(m1);
         System.out.println(s);
 
+
+        Period daysPeriod = Period.ofDays(20);
+        System.out.println(daysPeriod);
     }
 }
