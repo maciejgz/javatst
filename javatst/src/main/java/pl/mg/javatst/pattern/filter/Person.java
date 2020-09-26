@@ -1,8 +1,9 @@
 package pl.mg.javatst.pattern.filter;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Person {
+public class Person implements Serializable {
 
     private String name;
     private String gender;
