@@ -1,4 +1,4 @@
-package pl.mg.javatsts.leetcode.september;
+package pl.mg.javatsts.leetcode;
 
 
 import lombok.extern.slf4j.Slf4j;

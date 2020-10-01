@@ -1,4 +1,4 @@
-package pl.mg.javatsts.leetcode.september;
+package pl.mg.javatsts.leetcode;
 
 import java.util.Arrays;
 
@@ -17,11 +17,11 @@ public class FirstMissingPositive30 {
     public int firstMissingPositive(int[] nums) {
         int result = 0;
         Arrays.sort(nums);
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] > 0 && nums[i] > result) {
-                if (nums[i] == result + 1) {
+        for (int num : nums) {
+            if (num > 0 && num > result) {
+                if (num == result + 1) {
                     result++;
-                } else if (nums[i] > result + 1) {
+                } else if (num > result + 1) {
                     result++;
                     return result;
                 }

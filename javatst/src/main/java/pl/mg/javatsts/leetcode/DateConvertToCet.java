@@ -1,4 +1,4 @@
-package pl.mg.javatsts.leetcode.september;
+package pl.mg.javatsts.leetcode;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
