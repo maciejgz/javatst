@@ -9,7 +9,6 @@ public class AbstractFactoryTest {
 
     public static void main(String[] args) {
 
-
         //get shape factory
         AbstractFactory shapeFactory = FactoryProducer.getFactory("SHAPE");
 
