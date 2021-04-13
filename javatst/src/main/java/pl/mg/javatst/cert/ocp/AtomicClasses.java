@@ -9,5 +9,10 @@ public class AtomicClasses {
 
         System.out.println(integer.get());
         System.out.println(integer.addAndGet(120));
+
+        byte a = 127, b=5;
+        byte e = (byte) (a+b);
+        System.out.println(e);
+
     }
 }

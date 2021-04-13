@@ -10,4 +10,5 @@ public class Duck {
     private String name;
 
     private Integer weight;
+
 }

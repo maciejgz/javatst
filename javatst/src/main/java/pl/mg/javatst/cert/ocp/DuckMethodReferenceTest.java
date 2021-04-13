@@ -5,8 +5,8 @@ import java.util.Comparator;
 public class DuckMethodReferenceTest {
 
     public static void main(String[] args) {
-        Duck d1 = Duck.builder().name("duck1").weight(1).build();
-        Duck d2 = Duck.builder().name("duck2").weight(2).build();
+        Duck d1 = new Duck("duck1", 1);
+        Duck d2 = new Duck("duck2", 2);
 
         Comparator<Duck> comp1 = DuckHelper::compareByName;
 

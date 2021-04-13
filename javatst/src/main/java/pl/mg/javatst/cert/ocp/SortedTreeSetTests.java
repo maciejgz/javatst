@@ -3,9 +3,7 @@ package pl.mg.javatst.cert.ocp;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import java.util.Collections;
 import java.util.Comparator;
-import java.util.List;
 import java.util.TreeSet;
 
 @AllArgsConstructor

@@ -1,7 +1,5 @@
 package pl.mg.javatst.cert.ocp;
 
-import lombok.var;
-
 import javax.annotation.Nonnull;
 import java.util.function.LongUnaryOperator;
 
@@ -11,7 +9,7 @@ public class DefaultInterfaceImpl implements DefaultInterface {
     public static void main(String[] args) {
         DefaultInterfaceImpl impl = new DefaultInterfaceImpl();
 
-        var testVal = "res";
+        String testVal = "res";
 
         @Nonnull String sample;
         System.out.println(impl.afterDefault("re"));
