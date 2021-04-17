@@ -1,8 +1,9 @@
 package pl.mg.javatst.cert.ocp;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.lang.annotation.Documented;
+import java.nio.file.Path;
+import java.util.*;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -62,5 +63,36 @@ public class StreamTests {
         //tasks
         Stream<String> streamT1 = Stream.iterate("", (s) -> s + "1");
         System.out.println("streamT1 " + streamT1.limit(2).peek(System.out::println).map(x -> x + "2").collect(Collectors.toList()));
+
+        StreamTests.reduceTests();
+    }
+
+    private static void reduceTests() {
+        List<Duck> ducks = new ArrayList<>();
+        ducks.add(new Duck("sam", 15));
+        ducks.add(new Duck("john", 56));
+        ducks.add(new Duck("Alan", 2));
+        ducks.add(new Duck("Bob", 2));
+
+        Duck reduced = ducks.stream().reduce(new Duck("", 0), (result, element) -> {
+            result.setName(result.getName() + element.getName());
+            result.setWeight(result.getWeight() + element.getWeight());
+            return result;
+        });
+        System.out.println("reduce test result: " + reduced.toString());
+
+        Map<Integer, List<Duck>> collect = ducks.stream().collect(Collectors.groupingBy(Duck::getWeight));
+        for (Integer integer : collect.keySet()) {
+            System.out.println("duck with weight: " + integer + " exist: " + collect.get(integer).size());
+        }
+
+
+        Path p = Path.of("mango");
+        p.resolve("apple");
+        Path p2 = p.resolve("guava");
+        System.out.println(p2 + "" + p);
+
+
+        Path path = Path.of("aaa").normalize();
     }
 }
