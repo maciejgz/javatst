@@ -10,7 +10,7 @@ import java.util.List;
 public class FileUtil {
 
     public static List<String> readLines(String pathToResources) throws IOException {
-        ClassLoader classLoader = BinaryDiagnostic3.class.getClassLoader();
+        ClassLoader classLoader = FileUtil.class.getClassLoader();
         File file = new File(classLoader.getResource(pathToResources).getFile());
         return Files.readLines(file, StandardCharsets.UTF_8);
     }
