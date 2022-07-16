@@ -1,7 +1,7 @@
 package pl.mg.javatst.codewars;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Sort binary tree by levels kata
@@ -18,11 +18,31 @@ public class ListingBinaryTree {
 
     public static List<Integer> treeByLevels(Node node) {
         List<Integer> result = new ArrayList<>();
+        Map<Integer, List<Integer>> levels = new HashMap<>();
         if (node == null) {
             return result;
         }
-        result.add(1);
+        int height = height(node);
+        getDeeper(node, height, levels);
+        for (Integer kkey : levels.keySet().stream().sorted(Collections.reverseOrder()).collect(Collectors.toList())) {
+            result.addAll(levels.get(kkey));
+        }
         return result;
+    }
+
+    private static void getDeeper(Node node, int height, Map<Integer, List<Integer>> levels) {
+        if (node == null) {
+            return;
+        } else {
+            if (levels.containsKey(height)) {
+                levels.get(height).add(node.value);
+            } else {
+                levels.put(height, new ArrayList<>());
+                levels.get(height).add(node.value);
+            }
+            getDeeper(node.left, height - 1, levels);
+            getDeeper(node.right, height - 1, levels);
+        }
     }
 
     static void printLevelOrder(Node root) {
@@ -32,9 +52,7 @@ public class ListingBinaryTree {
             printCurrentLevel(root, i);
     }
 
-    /* Compute the "height" of a tree -- the number of
-    nodes along the longest path from the root node
-    down to the farthest leaf node.*/
+
     static int height(Node root) {
         if (root == null)
             return 0;
