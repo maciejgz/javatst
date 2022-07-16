@@ -14,6 +14,9 @@ public class ListingBinaryTree {
 
         printLevelOrder(new Node(new Node(null, new Node(null, null, 4), 2),
                 new Node(new Node(null, null, 5), new Node(null, null, 6), 3), 1));
+
+        System.out.println(ListingBinaryTree.treeByLevelsQueueSolution(new Node(new Node(null, new Node(null, null, 4), 2),
+                new Node(new Node(null, null, 5), new Node(null, null, 6), 3), 1)));
     }
 
     public static List<Integer> treeByLevels(Node node) {
@@ -79,5 +82,22 @@ public class ListingBinaryTree {
             printCurrentLevel(root.left, level - 1);
             printCurrentLevel(root.right, level - 1);
         }
+    }
+
+    //queue solution
+    public static List<Integer> treeByLevelsQueueSolution(Node node) {
+        if (node == null) return Collections.emptyList();
+        List<Integer> res = new ArrayList<>();
+        Queue<Node> nodesToVisit = new ArrayDeque();
+        nodesToVisit.offer(node);
+
+        Node current;
+        while ((current = nodesToVisit.poll()) != null) {
+            res.add(current.value);
+            if (current.left != null) nodesToVisit.offer(current.left);
+            if (current.right != null) nodesToVisit.offer(current.right);
+        }
+
+        return res;
     }
 }
