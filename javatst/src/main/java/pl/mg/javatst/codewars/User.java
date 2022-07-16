@@ -1,52 +1,65 @@
 package pl.mg.javatst.codewars;
 
+import java.util.Arrays;
+
 public class User {
-
-    public static void main(String[] args) {
-        User user = new User();
-        System.out.println(user.rank); // => -8
-        System.out.println(user.progress); // => 0
-        user.incProgress(8);
-        System.out.println(user.progress); // => 0 // progress is now zero
-        System.out.println(user.rank); // => -7
-    }
-
+    private int[] rankTable = new int[]{-8, -7, -6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5, 6, 7, 8};
     public int rank = -8;
-    public int progress = 0;
+    public int progress;
 
+    public int incProgress(int rank) {
+        if (Arrays.binarySearch(rankTable, rank) < 0) {
+            int exc = rankTable[Arrays.binarySearch(rankTable, rank)];// on purpose raise exception;
+        }
+        int point = calcPoint(rank);
 
-    void incProgress(int rank) throws IllegalArgumentException {
-        if (rank < -8 || rank > 8 || rank == 0) {
-            throw new IllegalArgumentException();
-        }
-        if (this.rank == rank) {
-            progress = progress + 3;
-        } else if (this.rank == rank + 1 || (this.rank == 1 && rank == -1)) {
-            progress = progress + 1;
-        } else if (rank > this.rank) {
-            progress = progress + (10 * calcDifference(this.rank, rank) * calcDifference(this.rank, rank));
-        }
-        if (progress >= 100) {
-            incRank((int) Math.floor(progress / 100));
-            progress = progress % 100;
-        }
-    }
+        int rankPlus = calcRankPlus(point);
 
-    int calcDifference(int userRank, int progressRank) {
-        if (userRank < 0 && progressRank > 0) {
-            return Math.abs(progressRank + Math.abs(userRank)) - 1;
-        } else {
-            return Math.abs(Math.abs(progressRank) - Math.abs(userRank));
-        }
-    }
-
-    void incRank(int incr) {
-        if (this.rank < 0 && (this.rank + incr > -1)) {
-            this.rank = this.rank + incr + 1;
-        } else if (this.rank != 8) {
-            this.rank = this.rank + incr;
+        //this.progress = progress % 100;
+        this.rank = getRank(getRankIndex(this.rank) + rankPlus);
+        if (this.rank != rankTable[rankTable.length - 1]) {
+            this.progress += point - (rankPlus * 100);
         } else {
             this.progress = 0;
         }
+
+        return this.rank;
     }
+
+    private int getRank(int rankIndex) {
+        if (rankIndex > rankTable.length - 1) {
+            return rankTable[rankTable.length - 1];
+        }
+        return rankTable[rankIndex];
+    }
+
+    private int calcRankPlus(int point) {
+        int remain = this.progress % 100;
+
+        return (remain + point) / 100;
+    }
+
+    public int calcPoint(int actRank) {
+        int userIndex = getRankIndex(this.rank);
+        int actIndex = getRankIndex(actRank);
+        int diff = actIndex - userIndex;
+        int point = 0;
+        if (diff < -1) {
+            point = 0;
+        } else if (diff == -1) {
+            point = 1;
+        } else if (diff == 0) {
+            point = 3;
+        } else {
+            point = 10 * diff * diff;
+        }
+
+        return point;
+    }
+
+    private int getRankIndex(int rank) {
+        return Arrays.binarySearch(rankTable, rank);
+    }
+
+
 }
