@@ -13,18 +13,7 @@ public class Day10HoofIt {
         log.debug("Day 10 Hoof it");
         List<String> lines = Utils.readLines("src/main/resources/adventofcode/day10_input.txt");
         char[][] input = lines.stream().map(String::toCharArray).toArray(char[][]::new);
-/*        int result = 0;
-        for (int i = 0; i < input.length; i++) {
-            for (int j = 0; j < input[i].length; j++) {
-                if (input[i][j] == '0') {
-                    log.debug("checking element: i-{}, j-{} value={}", i, j, input[i][j]);
-                    boolean[][] visited = new boolean[input.length][input[i].length];
-                    result += solution(i, j, input, visited, 0, 0);
-                }
-            }
-        }*/
-
-        log.debug("Total trailhead scores: " + calculateTrailheadScores(input));
+        log.debug("Total trailhead scores: {}", calculateTrailheadScores(input));
     }
 
     public static int calculateTrailheadScores(char[][] map) {

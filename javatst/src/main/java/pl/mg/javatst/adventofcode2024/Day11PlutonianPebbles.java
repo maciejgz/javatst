@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class Da11PlutonianPebbles {
+public class Day11PlutonianPebbles {
 
     public static void main(String[] args) {
         System.out.println("Day 11 Plutonian Pebbles");
