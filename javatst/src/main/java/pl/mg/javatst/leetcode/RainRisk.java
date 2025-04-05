@@ -1,4 +1,4 @@
-package pl.mg.javatsts.leetcode;
+package pl.mg.javatst.leetcode;
 
 /**
  * https://adventofcode.com/2020/day/12

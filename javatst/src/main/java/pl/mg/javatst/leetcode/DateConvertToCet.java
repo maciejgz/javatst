@@ -1,4 +1,4 @@
-package pl.mg.javatsts.leetcode;
+package pl.mg.javatst.leetcode;
 
 import java.time.Instant;
 import java.time.LocalDateTime;

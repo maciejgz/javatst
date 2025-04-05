@@ -1,8 +1,6 @@
-package pl.mg.javatsts.leetcode;
+package pl.mg.javatst.leetcode;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class RecentCounterTest {
 

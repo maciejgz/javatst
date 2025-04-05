@@ -1,4 +1,4 @@
-package pl.mg.javatsts.leetcode;
+package pl.mg.javatst.leetcode;
 
 import org.apache.commons.collections4.list.TreeList;
 

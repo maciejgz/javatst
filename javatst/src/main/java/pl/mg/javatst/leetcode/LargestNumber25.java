@@ -1,4 +1,4 @@
-package pl.mg.javatsts.leetcode;
+package pl.mg.javatst.leetcode;
 
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
