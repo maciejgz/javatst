@@ -8,7 +8,6 @@ import java.util.Queue;
 
 /**
  * <a href="https://adventofcode.com/2024/day/18">Advent of code 2024 day 18</a>
- *
  * Utility runner that simulates bytes dropping onto a memory grid and finds a shortest path
  * from a fixed START point to an END point using Breadth-First Search (BFS).
  */
@@ -26,14 +25,12 @@ public class Day18RAMRun {
 
     /**
      * Entry point for this runner (non-standard signature used for internal invocation).
-     *
      * This method performs the following steps:
      * - Reads input lines from resources (each line expected in the format "X,Y").
      * - Converts the first set of coordinates to integer pairs.
      * - Simulates dropping a configured number of bytes onto the memory grid.
      * - Prints the memory grid to stdout marking start (S), exit (E) and corrupted cells (#).
      * - Runs a BFS to determine the minimum number of steps from START to END and prints the result.
-     *
      * Note: This method mutates local state and prints status to System.out/System.err; it does not
      * return a value so it is primarily intended for interactive or demo runs.
      */
@@ -81,10 +78,8 @@ public class Day18RAMRun {
 
     /**
      * Converts a list of coordinate strings into a 2D int array.
-     *
      * Each string in {@code byteList} is expected to be in the format "X,Y" where X and Y are integers.
      * The returned array has shape [byteList.size()][2] where element [i][0] is X and [i][1] is Y.
-     *
      * Lines that do not match the expected format or cannot be parsed as integers are ignored and
      * will leave the corresponding entry in the returned array set to the default value 0.
      *
@@ -123,7 +118,6 @@ public class Day18RAMRun {
 
     /**
      * Finds the minimum number of steps from START to END using Breadth-First Search (BFS).
-     *
      * The method treats {@code grid[x][y] == true} as a blocked/corrupted cell and will not traverse
      * such cells. Movement is allowed in four cardinal directions (up/down/left/right). The returned
      * value is the number of steps in the shortest path, or {@code -1} if no path exists.
@@ -173,7 +167,6 @@ public class Day18RAMRun {
 
     /**
      * Simulates dropping up to {@code count} bytes onto the {@code grid}.
-     *
      * The {@code incomingBytes} array is expected to be in the same format as returned by
      * {@link #convertStringListToByteArray(List)} (shape [N][2]). Cells corresponding to the
      * coordinates will be marked as corrupted (true). Coordinates outside the grid bounds are
@@ -195,7 +188,6 @@ public class Day18RAMRun {
         }
     }
 
-
     /**
      * Simple helper class representing a point on the grid and the number of steps taken to reach it.
      */
@@ -206,7 +198,6 @@ public class Day18RAMRun {
 
         /**
          * Construct a new Point.
-         *
          * @param x x-coordinate (0-based)
          * @param y y-coordinate (0-based)
          * @param steps number of steps taken to reach this point
