@@ -12,7 +12,7 @@ import java.util.List;
 @Slf4j
 public class Utils {
 
-    static List<String> readLines(String filePath) {
+    public static List<String> readLines(String filePath) {
         Path path = Paths.get(filePath);
         try {
             return Files.readAllLines(path);
