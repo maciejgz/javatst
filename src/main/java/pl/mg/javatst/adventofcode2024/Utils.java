@@ -22,4 +22,11 @@ public class Utils {
         }
     }
 
+    public static String toString(Boolean[] row) {
+        StringBuilder sb = new StringBuilder();
+        for (Boolean b : row) {
+            sb.append(b ? '#' : '.');
+        }
+        return sb.toString();
+    }
 }
